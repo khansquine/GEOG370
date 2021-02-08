@@ -9,17 +9,71 @@
     <h1>In this project I learned how to display images in different projections</h1>
     
     <h2 style="color:red">Describe in your own words how you displayed the map in different projections using QGIS</h2>
-    <p>You can write a paragraph here</p>
+    <p>After adding the shape file for the map data into QGIS, I turned on the indicatrix mapper. Then I clicked on the EPSG
+        number in the bottom right corner to open a window that allowed me to search for projections by number. After applying
+        these, I selected New Print File in the upper left to apply the map, add a text box for a title, and exported it as a
+        png.
+    </p>
     
     <h2>WGS84 Projection</h2>
-    <h3>Some observations</h3>
+    <h3>The WGS84 appears to project distances reliably, as indicated by the similar size grids which extend only slightly 
+        approaching north and south poles. Shape seems to also be preserved towards the equator but distorted near the North 
+        and South poles. Area and angles are not consistent especially approaching North and South poles.
+    </h3>
     <a href=".//maps/4326.png">
     <img src=".//maps/4326.png" alt="WGS84" width='500px'>
     </a>
     <h2>Aitoff Projection</h2>
-    <h3>Some observations</h3>
+    <h3>For the Aitoff projection, area and shape are consistent near the the center and become heavily distorted towards the outter edges of the
+        map. Angles and distance don't appear to be preserved as well towards the west and east edges of the map..
+    </h3>
     <a href=".//maps/54043.png">
     <img src=".//maps/54043.png" alt="Aitoff" width='500px'>
+    </a>
+    <h2>Pseudo Mercator</h2>
+    <h3>The Pseudo Mercator map projects angle and shape very well. Distance and area become very distorted approaching the North and South poles.</h3>
+    <a href="./maps/3857.png">
+    <img src="./maps/3857.png" alt="Pseudo Mercator" width='500px'>
+    </a>
+    <h2>Winkle I</h2>
+    <h3>The Winkle I projection appears to preserve distance somewhat, particularly towards the equator. Shape and angle become more distorted near the equator than they are at the poles and Prime meridian.
+        The area becomes more distorted towards the North and South poles.
+    </h3>
+    <a href="./maps/53018.png">
+    <img src="./maps/53018.png" alt="Winkle I" width='500px'>
+    </a>
+    <h2>Equal Area Cylindrical</h2>
+    <h3>In the Equal Area Cylindrical projection, area is preserved very well. However distance, shape, and angle become distorted
+        when moving further away from the equator.
+    </h3>
+    <a href="./maps/54034.png">
+    <img src="./maps/54034.png" alt="Equal Area Cylindrical" width='500px'>
+    </a>
+    <h2>Equidistant Conical</h2>
+    <h3>The Equidistant Conical projection preserves distance well, but area, shape, and angle become continually more distorted approaching the edges of the map.</h3>
+    <a href="./maps/54027.png">
+    <img src="./maps/54027.png" alt="Equidistant Conical" width='500px'>
+    </a>
+    <h2>Azimuthal Equidistant</h2>
+    <h3>The Azimuthal Equidistant projection is very good when trying to preserve distance on a map.
+        However shape, area, and angle get very distorted toward the outer edges of the globe.
+    </h3>
+    <a href="./maps/102016.png">
+    <img src="./maps/102016.png" alt="Azimuthal Equidistant" width='500px'>
+    </a>
+    <h2>van der Grinten I</h2>
+    <h3>The van der Grinten I projection appears to preserve angle and shape very well, though these get somewhat distorted at the very far edges of the map away from the Prime Meridian. 
+        Area is greatly distorted near the North and South poles, and distance appears distorted around all edges of the map.
+    </h3>
+    <a href="./maps/54029.png">
+    <img src="./maps/54029.png" alt="van der Grinten I" width='500px'>
+    </a>
+    <h2>Wagner IV</h2>
+    <h3>The Wagner IV projection seems to preserve shape towards the North and South poles, while becoming more distorted approaching the equator. It does not depict angle well. Area seems preserved closer to the equator but not further 
+        away north or south. 
+    </h3>
+    <a href="./maps/54074.png">
+    <img src="./maps/54074.png" alt="Wagner IV" width='500px'>
     </a>
     <h2 style="color:red">Now, you should <u>add the following projections on your own:</u></h2>
     <h3>EPSG: 3857, 53018, 54034, 54027, 102016, and two additional projections that you choose.</h3>
