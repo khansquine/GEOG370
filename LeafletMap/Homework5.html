@@ -1,0 +1,72 @@
+<html>
+    <head>
+        <title>My First Leaflet Map</title>
+        <link rel="stylesheet" href="https://unpkg.com/leaflet@1.6.0/dist/leaflet.css"
+            integrity="sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ=="
+            crossorigin=""/>
+        <script src="https://unpkg.com/leaflet@1.6.0/dist/leaflet.js"
+            integrity="sha512-gZwIG9x3wUXg2hdXF6+rVkLF/0Vi9U8D2Ntg4Ga5I5BZpVkVxlJWbSQtXPSiUTtC0TjtGOmxa1AJPuV0CPthew=="
+            crossorigin=""></script>
+        <script src="./leaflet/data/belltower.geojson"></script>
+    </head>
+    <body>
+        <div id="mapid"></div>
+        <style>
+            #mapid{ width: 900px; height: 500px; }
+        </style>
+        <script> 
+        var map = L.map('mapid').setView([35.9078, -79.0499], 17);
+
+        L.tileLayer('https://{s}.tile.opentopomap.org/{z}/{x}/{y}.png', {
+        }).addTo(map);
+
+        var IconI = L.icon({ 
+            iconUrl: 'https://cdn3.vectorstock.com/i/1000x1000/96/72/bell-tower-vector-22439672.jpg',
+            iconSize: [50,50],
+            popupAnchor: [0,0]
+        });
+        
+        var PopupI = "Bell Tower<br/><img src='https://www.unc.edu/wp-content/uploads/2018/08/belltower.jpg'width='100px'/>"
+
+        L.marker([35.9086, -79.0492],{icon:IconI}).addTo(map)
+            .bindPopup(PopupI)
+            .openPopup();
+
+        var IconII = L.icon({ 
+            iconUrl: 'https://previews.123rf.com/images/hedgehogvector/hedgehogvector1801/hedgehogvector180100087/93807013-sport-equipment-simple-stadium-icon.jpg',
+            iconSize: [50,50],
+            popupAnchor: [0,0]
+        });
+        
+        var PopupII = "Kenan Memorial Stadium<br/><img src='https://i0.wp.com/triangleonthecheap.com/wordpress/wp-content/uploads/2016/04/Kenan-Stadium.jpeg?resize=610%2C406'width='100px'/>"
+
+        L.marker([35.9070, -79.0479],{icon:IconII}).addTo(map)
+            .bindPopup(PopupII)
+            .openPopup();
+
+        var IconIII = L.icon({ 
+            iconUrl: 'https://armyrotc.unc.edu/wp-content/uploads/sites/1597/2019/11/MacArthur-Award-150x150.jpg',
+            iconSize: [50,50],
+            popupAnchor: [0,0]
+        });
+        
+        var PopupIII = "NROTC Naval Armory<br/><img src='https://armyrotc.unc.edu/wp-content/uploads/sites/1597/2019/02/2019bnphoto.jpg'width='100px'/>"
+
+        L.marker([35.9091, -79.0529],{icon:IconIII}).addTo(map)
+            .bindPopup(PopupIII)
+            .openPopup();
+
+
+
+
+        // L.geoJSON(belltower).addTo(map)
+        // L.geoJSON(belltower, { // a
+        // pointToLayer: function (feature, latlng) { // b
+        // return L.marker(latlng, {icon: uncIcon});}}) // c
+        // .bindPopup(customPopup) // d
+        // .addTo(map); //
+
+        </script>
+        First Leaflet Map
+    </body>
+</html>
