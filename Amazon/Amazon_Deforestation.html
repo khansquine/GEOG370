@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head></head>
+    <body>
+        <h1>Homework 10: Geoprocessing Analysis</h1>
+        <h2>Kelawni Hansquine </h2>
+        <h3>These maps look at the difference in forest cover in Brazil to address the question how has forest cover changed as a result of deforestation in the Amazon.
+            For the first map, I started with the question of how much land in Brazil is considered to be part of the Amazon Forest. I used the intersection function on the Amazon Forest 
+            layer with Brazil to show this. The second map addresses the question of how much of the area in Brazil is still forested. I created an intersection with a deforestation layer and Brazil, and I 
+            then used the difference tool to remove parts of the Amazon layer that overlap with the deforestation layer, leaving only forested areas in Brazil as of 2007. Comparing the two
+            maps demonstrates the difference in Amazon forest coverage between 1988 and 2007.
+        </h3>
+        <img src="Amazon_Forest_Coverage.png" width="50%"><img src="Deforested_updated.png" width="50%">
+        <h3>Data Sources</h3>
+        <h4><a href="http://terrabrasilis.dpi.inpe.br/en/download-2/">Amazon Deforestation</a></h4>
+        <h4><a href="https://www.igismap.com/brazil-shapefile-download-free/">Brazil Polygon</a></h4>
+        <iframe src=https://map.igismap.com/share-map/brazil-administrative_outline_boundary/40008b9a5380fcacce3976bf7c08af5b></iframe>
+        <h4><a href="http://terrabrasilis.dpi.inpe.br/en/download-2/">Amazon Forest</a></h4>
+        <h3>New Layers</h3>
+        <h4><a href="Amazon_Intersect.geojson"></a>Intersected Amazon Layer</h4>
+    </body>
+</html>
